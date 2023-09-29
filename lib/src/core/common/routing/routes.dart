@@ -18,9 +18,9 @@ Route<dynamic>? routes(RouteSettings routeSettings) => MaterialPageRoute<void>(
           case SampleItemDetailsView.routeName:
             return const SampleItemDetailsView();
           case NewsFeedPage.routeName:
-            return const NewsFeedPage();
+            return NewsFeedPage();
           default:
-            return const NewsFeedPage();
+            return NewsFeedPage();
         }
       },
     );
