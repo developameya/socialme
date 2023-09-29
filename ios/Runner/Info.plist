@@ -47,5 +47,9 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>SocialMe would like to access images to add to post.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>SocialMe would like to access camera to add photo to post.</string>
 </dict>
 </plist>
