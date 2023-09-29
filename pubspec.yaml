@@ -19,6 +19,7 @@ dependencies:
   injectable: ^2.1.2
   get_it: ^7.6.0
   getwidget: ^4.0.0
+  cached_network_image: ^3.3.0
   font_awesome_flutter: ^10.5.0
   flutter:
     sdk: flutter
