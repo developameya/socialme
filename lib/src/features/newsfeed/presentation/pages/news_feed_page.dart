@@ -1,18 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:socialme/src/core/common/settings/settings_view.dart';
-import 'package:socialme/src/features/newsfeed/data/datamodel/sample_item.dart';
+import 'package:socialme/src/features/newsfeed/presentation/pages/post_page.dart';
 import 'package:socialme/src/features/newsfeed/presentation/widgets/news_feed_item_widget.dart';
+import 'package:socialme/src/features/newsfeed/service/entity/news_feed_item_entity.dart';
 
 /// Displays a list of SampleItems.
 class NewsFeedPage extends StatelessWidget {
-  const NewsFeedPage({
+  NewsFeedPage({
     super.key,
-    this.items = const [SampleItem(1), SampleItem(2), SampleItem(3)],
   });
 
   static const routeName = '/';
 
-  final List<SampleItem> items;
+  final List<NewsFeedItemEntity> items = List.generate(
+      100,
+      (index) => NewsFeedItemEntity(
+            id: "$index",
+            author: "User $index",
+            createdAt: "1/12/13",
+            title: "No.$index Post",
+            description:
+                "This is the $index post. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In mollis nunc sed id semper risus in hendrerit gravida. Vitae congue eu consequat ac felis donec. Etiam non quam lacus suspendisse faucibus interdum posuere. ",
+          ));
 
   @override
   Widget build(BuildContext context) {
@@ -29,12 +38,14 @@ class NewsFeedPage extends StatelessWidget {
         ],
       ),
       body: ListView.builder(
-        restorationId: 'sampleItemListView',
+        restorationId: 'NewsFeedPage',
         itemCount: items.length,
         itemBuilder: (BuildContext context, int index) {
           final item = items[index];
-
-          return NewsFeedItemWidget(item: item);
+          return GestureDetector(
+            onTap: () => Navigator.of(context).pushNamed(PostPage.routeName),
+            child: NewsFeedItemWidget(item: item),
+          );
         },
       ),
     );
