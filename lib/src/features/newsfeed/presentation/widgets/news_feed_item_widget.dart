@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:getwidget/getwidget.dart';
+import 'package:socialme/src/core/common/widgets/user_avatar_widget.dart';
 import 'package:socialme/src/features/newsfeed/service/entity/news_feed_item_entity.dart';
 
 class NewsFeedItemWidget extends StatelessWidget {
@@ -25,13 +26,7 @@ class NewsFeedItemWidget extends StatelessWidget {
         boxFit: BoxFit.cover,
         titlePosition: GFPosition.start,
         title: GFListTile(
-            avatar: GFAvatar(
-              backgroundImage: item.authorImageUrl != null
-                  ? NetworkImage(item.authorImageUrl!)
-                  : null,
-              child:
-                  item.authorImageUrl == null ? const Icon(Icons.person) : null,
-            ),
+            avatar: UserAvatarWidget(userImageUrl: item.authorImageUrl),
             title: Text(
               item.title ?? "",
               style: Theme.of(context).textTheme.titleMedium,
