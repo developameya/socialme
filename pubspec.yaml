@@ -22,6 +22,7 @@ dependencies:
   getwidget: ^4.0.0
   cached_network_image: ^3.3.0
   font_awesome_flutter: ^10.5.0
+  intl: any
   flutter:
     sdk: flutter
   flutter_localizations:
