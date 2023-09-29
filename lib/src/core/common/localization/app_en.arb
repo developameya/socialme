@@ -2,5 +2,8 @@
   "appTitle": "socialme",
   "@appTitle": {
     "description": "The title of the application"
-  }
+  },
+  "defaultPostTitle": "Social Post",
+  "editButtonLabel": "edit",
+  "emptyPostMessage": "There's nothing here!"
 }
