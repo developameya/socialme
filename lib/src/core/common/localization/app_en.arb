@@ -5,5 +5,13 @@
   },
   "defaultPostTitle": "Social Post",
   "editButtonLabel": "edit",
-  "emptyPostMessage": "There's nothing here!"
+  "emptyPostMessage": "There's nothing here!",
+  "imageAttachPrompt": "Attach Image",
+  "titleTextHint": "Title",
+  "postBodyHint": "Express yourself!",
+  "saveButtonLabel": "Save",
+  "editPostTitle": "Edit Post",
+  "galleryButtonLabel": "Gallery",
+  "cameraButtonLabel": "Camera",
+  "noImageAttachementPrompt": "No image selected."
 }
