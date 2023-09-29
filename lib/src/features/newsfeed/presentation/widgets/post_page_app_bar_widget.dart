@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:socialme/src/features/newsfeed/presentation/pages/edit_post_page.dart';
+import 'package:socialme/src/features/posts/presentation/edit_post_page.dart';
 
 AppBar buildPostPageAppBar({
   String? title,
