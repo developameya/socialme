@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:socialme/src/core/common/services/service_locator.dart';
 import 'package:socialme/src/core/common/settings/settings_controller.dart';
 
@@ -18,5 +19,5 @@ void main() async {
   // Run the app and pass in the SettingsController. The app listens to the
   // SettingsController for changes, then passes it further down to the
   // SettingsView.
-  runApp(const SocialMeApp());
+  runApp(const ProviderScope(child: SocialMeApp()));
 }
