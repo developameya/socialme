@@ -9,7 +9,7 @@ import 'package:image_picker/image_picker.dart';
 class EditPostPage extends HookWidget {
   const EditPostPage({super.key});
 
-  static const routeName = '/edit_post_page';
+  static const routeName = '/editpost';
 
   @override
   Widget build(BuildContext context) {

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:socialme/src/features/authentication/presentation/widgets/indicator_button_widget.dart';
 
 class SignUpPage extends StatelessWidget {
-  static const routeName = 'sign_up_page';
+  static const routeName = '/signup';
   const SignUpPage({super.key});
 
   @override

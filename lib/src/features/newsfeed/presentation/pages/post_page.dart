@@ -25,7 +25,7 @@ class PostPage extends HookWidget {
     required this.post,
   });
 
-  static const routeName = '/post_page';
+  static const routeName = '/newsfeed/post';
 
   @override
   Widget build(BuildContext context) {

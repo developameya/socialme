@@ -1,3 +1,4 @@
+import 'package:beamer/beamer.dart';
 import 'package:flutter/material.dart';
 import 'package:socialme/src/core/common/settings/settings_view.dart';
 import 'package:socialme/src/features/newsfeed/presentation/pages/post_page.dart';
@@ -10,7 +11,7 @@ class NewsFeedPage extends StatelessWidget {
     super.key,
   });
 
-  static const routeName = '/';
+  static const routeName = '/newsfeed';
 
   final List<NewsFeedItemEntity> items = List.generate(
       100,
@@ -43,7 +44,8 @@ class NewsFeedPage extends StatelessWidget {
         itemBuilder: (BuildContext context, int index) {
           final item = items[index];
           return GestureDetector(
-            onTap: () => Navigator.of(context).pushNamed(PostPage.routeName),
+            // onTap: () => Navigator.of(context).pushNamed(PostPage.routeName),
+            onTap: () => context.beamToNamed(PostPage.routeName),
             child: NewsFeedItemWidget(item: item),
           );
         },

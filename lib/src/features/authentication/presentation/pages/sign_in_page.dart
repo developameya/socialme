@@ -1,10 +1,11 @@
+import 'package:beamer/beamer.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:socialme/src/features/authentication/presentation/pages/sign_up_page.dart';
 import 'package:socialme/src/features/authentication/presentation/widgets/indicator_button_widget.dart';
 
 class SignInPage extends StatelessWidget {
-  static const routeName = 'auth_page';
+  static const routeName = '/signin';
   const SignInPage({super.key});
 
   @override
@@ -69,10 +70,8 @@ class SignInPage extends StatelessWidget {
                           .bodyMedium
                           ?.copyWith(color: Colors.blueAccent),
                       recognizer: TapGestureRecognizer()
-                        ..onTap = () => Navigator.restorablePushNamed(
-                              context,
-                              SignUpPage.routeName,
-                            ))
+                        ..onTap =
+                            () => context.beamToNamed(SignUpPage.routeName))
                 ])),
             const SizedBox(height: 12),
             const IndicatorButtonWidget(label: 'Sign In'),
