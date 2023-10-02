@@ -8,6 +8,7 @@ import 'package:socialme/src/features/authentication/presentation/pages/sign_up_
 import 'package:socialme/src/features/newsfeed/location.dart';
 import 'package:socialme/src/features/newsfeed/presentation/pages/news_feed_page.dart';
 import 'package:socialme/src/features/newsfeed/presentation/pages/post_page.dart';
+import 'package:socialme/src/features/newsfeed/presentation/pages/user_page.dart';
 import 'package:socialme/src/features/posts/presentation/edit_post_page.dart';
 
 ///Provides logic for navigation and
@@ -28,6 +29,7 @@ BeamerDelegate routeDelegate = BeamerDelegate(
     BeamGuard(
       pathPatterns: [
         NewsFeedPage.routeName,
+        UserPage.routeName,
         PostPage.routeName,
         EditPostPage.routeName,
       ],
