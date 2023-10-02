@@ -1,7 +1,7 @@
 import 'package:beamer/beamer.dart';
 import 'package:flutter/material.dart';
-import 'package:socialme/src/core/common/settings/settings_view.dart';
 import 'package:socialme/src/features/newsfeed/presentation/pages/post_page.dart';
+import 'package:socialme/src/features/newsfeed/presentation/pages/user_page.dart';
 import 'package:socialme/src/features/newsfeed/presentation/widgets/news_feed_item_widget.dart';
 import 'package:socialme/src/features/newsfeed/service/entity/news_feed_item_entity.dart';
 
@@ -31,10 +31,8 @@ class NewsFeedPage extends StatelessWidget {
         title: const Text('News Feed'),
         actions: [
           IconButton(
-            icon: const Icon(Icons.settings),
-            onPressed: () {
-              Navigator.restorablePushNamed(context, SettingsView.routeName);
-            },
+            icon: const Icon(Icons.person_2),
+            onPressed: () => context.beamToNamed(UserPage.routeName),
           ),
         ],
       ),
@@ -44,7 +42,6 @@ class NewsFeedPage extends StatelessWidget {
         itemBuilder: (BuildContext context, int index) {
           final item = items[index];
           return GestureDetector(
-            // onTap: () => Navigator.of(context).pushNamed(PostPage.routeName),
             onTap: () => context.beamToNamed(PostPage.routeName),
             child: NewsFeedItemWidget(item: item),
           );
