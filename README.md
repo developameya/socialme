@@ -16,6 +16,14 @@ SocialMe requires code generation. Make sure to run the following command before
 ```console
 dart run build_runner build
 ```
+## Pull changes from remote repository
+
+To pull changes from the remote repository, run the following command.
+
+```console
+git pull socialme main
+```
+
 ## Localization
 
 This project generates localized messages based on arb files found in
